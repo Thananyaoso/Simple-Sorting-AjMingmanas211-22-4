@@ -1,5 +1,5 @@
 compile: main.cpp 
-	 g++  main.cpp -o bubble
+	 g++  main_selection.cpp -o selection
 
 compileSelection: main_selection.cpp 
 	 g++  main_selection.cpp -o selection

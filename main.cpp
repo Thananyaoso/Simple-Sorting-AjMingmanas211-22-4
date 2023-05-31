@@ -1,18 +1,25 @@
-#define N 6
 #include <iostream>
+#include <iomanip>
 using namespace std;
 #include "sorting.h"
 
-int main() {
-  int a[N]={3,2,6,7,3,1};
-  int i,j,new_number;
+int main(int argc, char** argv) {
+  int N = argc-1;
+  int* a = new int[N];
+  for (int i=1; i < argc;i++)
+    a[i - 1 ] = atoi(argv[i]);
 
-   display(a,N);
-  bubbleSort(a,N); 
-   //insertion(a,N);
 
+  display(a,N);
+  // bubbleSort(a,N); 
+  // cout<<endl;
   // selectionSort(a,N);
-  // display(a,N);
+  // cout<<endl;
+  // insertionSort(a,N);
+  mergeSort(a,N);
+
+  delete[] a;
+  return 0;
 }
 
-// new number =2 
+
